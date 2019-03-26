@@ -1,0 +1,18 @@
+{
+  "name": "Zentao",
+  "description": "Have your own open-source Zentao platform.",
+  "repository": "https://github.com/guillemonzo/zentaopms",
+  "keywords": ["php", "task", "project", "management"],
+  "website": "https://www.zentao.pm",
+  "env": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-php.git",
+    "HEROKU_APP_NAME": {
+      "description": "Please re-enter your App Name from the top.",
+      "required": true
+    },
+    "DEPLOY_PLATFORM": "heroku"
+  },
+  "addons": [
+    "mongolab"
+  ]
+}
