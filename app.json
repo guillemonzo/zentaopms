@@ -1,7 +1,7 @@
 {
   "name": "Zentao",
   "description": "Have your own open-source Zentao platform.",
-  "repository": "https://github.com/guillemonzo/zentaopms/www",
+  "repository": "https://github.com/guillemonzo/zentaopms/tree/master/www",
   "keywords": ["php", "task", "project", "management"],
   "website": "https://www.zentao.pm",
   "env": {
