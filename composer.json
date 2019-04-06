@@ -1,8 +1,7 @@
 {
     "require": {
-        "php": "^7.1"
-      },
-    "require-dev": {       
-        "heroku/heroku-buildpack-php": "*"
-    }
+        "php": "^7.1",
+        "ext-mbstring": "*",
+        "ext-memcached": "*"
+      }    
 }
