@@ -1,5 +1,4 @@
 config/db.php
-www/ok.txt
 tools/*
 release/*
 vendor/*
