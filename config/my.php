@@ -3,7 +3,7 @@
 $url = getenv('JAWSDB_URL');
 $dbparts = parse_url($url);
 
-$config->installed       = false;
+$config->installed       = true;
 $config->debug           = false;
 $config->requestType     = 'PATH_INFO';
 $config->timezone        = 'Europe/Madrid';
