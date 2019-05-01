@@ -1,8 +1,9 @@
 {
-  "name": "Zentao",
-  "description": "Have your own open-source Zentao platform.",
+  "name": "ZenTao",
+  "logo": "http://www.zentao.pm/file.php?f=201903/f_4c80a95b01b92c55a14e8dd2cb2404c4.png&t=png&o=&s=&v=1556626546",
+  "description": "Have your own open-source ZenTao platform.",
   "repository": "https://github.com/guillemonzo/zentaopms",
-  "keywords": ["php", "task", "project", "management"],
+  "keywords": ["zentao", "php", "task", "project", "management"],
   "website": "https://www.zentao.pm",
   "env": {
     "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-php.git",
@@ -14,6 +15,7 @@
   },
   "addons": [
     "jawsdb",
-    "memcachier"
+    "memcachier",
+    "sendgrid"
   ]
 }

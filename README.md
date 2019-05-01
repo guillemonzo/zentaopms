@@ -1,3 +1,23 @@
+Hi! The purpose of this fork is to have a running installation of Zentao as a Heroku app.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+# Installation
+ZenTao uses a flag in a configuration file in order to indicate if it has been installed or not. Heroku filesystem is [ephemeral](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem), that means that any changes to the filesystem whilst the dyno is running only last until that dyno is shut down or restarted. 
+
+In order to make it running on Heroku, we are going to simulate that the installations is already done and we are going to run the following SQL scripts:
+
+1. Execute [install.sql](https://github.com/guillemonzo/zentaopms/blob/master/install.sql) script to create the database structure.
+2. Execute the following statements to create the admin user and the company:
+
+   `` INSERT INTO `zt_user` (`id`, `dept`, `account`, `password`, `role`, `realname`, `nickname`, `commiter`, `avatar`, `birthday`, `gender`, `email`, `skype`, `qq`, `mobile`, `phone`, `weixin`, `dingding`, `slack`, `whatsapp`, `address`, `zipcode`, `join`, `visits`, `ip`, `last`, `fails`, `locked`, `ranzhi`, `score`, `scoreLevel`, `deleted`) VALUES (1, 0, 'admin', 'php md5(password)', '', 'admin', '', '', '', '0000-00-00', 'f', '', '', '', '', '', '', '', '', '', '', '', '0000-00-00', 1, '', 1556626755, 0, '0000-00-00 00:00:00', '', 0, 0, '0'); `` 
+  
+   `` INSERT INTO `zt_company` (`id`, `name`, `phone`, `fax`, `address`, `zipcode`, `website`, `backyard`, `guest`, `admins`, `deleted`) VALUES	(1, 'Company name', NULL, NULL, NULL, NULL, NULL, NULL, '0', ',admin,', '0'); ``
+   
+   `` INSERT INTO `zt_userview` (`account`, `products`, `projects`) VALUES	('admin', '', ''); ``
+
+# ZenTao
+
 1. What is ZenTao?
 
 =====================
